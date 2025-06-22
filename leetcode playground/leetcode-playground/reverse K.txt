@@ -1,0 +1,41 @@
+// "static void main" must be defined in a public class.
+
+public class ReverseK {
+    public Queue<Integer>modifyQueue(Queue<Integer> q,int k){
+        Stack<Integer>st = new Stack<>();
+        int n = q.size()-k;
+        while(k-->0){
+            int a = q.peek();
+            q.poll();
+            st.push(a);
+        }
+        while(!st.isEmpty()){
+            int x = st.peek();
+            st.pop();
+            q.add(x);
+        }
+        for(int i = 0; i<n; i++){
+            int a = q.peek();
+            q.poll();
+            q.add(a);
+        }
+        return q;
+    }
+    public static void main(String[] args) {
+        // 12345   3
+        int k = 3;
+        ReverseK rev = new ReverseK();
+        Queue<Integer>que = new LinkedList<>();
+        que.add(1);
+        que.add(2);
+        que.add(3);
+        que.add(4);
+        que.add(5);
+        Queue<Integer>newQue = rev.modifyQueue(que,k);
+        System.out.print(newQue);
+        
+    }
+}
+
+// time complicity O(N);
+// space Complicity O(N);
