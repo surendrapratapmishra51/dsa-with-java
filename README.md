@@ -1,5 +1,5 @@
 # dsa-with-java
-# 📚 Java DSA Practice Repository
+# 📚 DSA- with- JAVA
 
 Welcome to my Java DSA Practice Repository!  
 This project contains a comprehensive collection of **Java programs**,
@@ -44,4 +44,4 @@ The `src/` folder includes topic-wise Java programs:
 
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone https://github.com/surendrapratapmishra51/dsa-with-java.git
